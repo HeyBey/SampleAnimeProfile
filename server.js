@@ -31,21 +31,7 @@ function my_website(req, res) {
     res.writeHead(200, { "Content-Type": "text/html" });
     res.write("<p>Hello World</p> Sample \n" + req.url);
     res.end();
-  } else if (req.url == "/zxc" && req.method == "GET") {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    var html =
-      "<!DOCTYPE html>" +
-      "<html>" +
-      "<head>" +
-      "<title>Kay Yel Pala To</title>" +
-      "</head>" +
-      "<body>" +
-      "<h1>Hehez1</h1>" +
-      "</body>" +
-      "</html>";
-    res.write(html);
-    res.end();
-  } else {
+   } else {
     res.writeHead(404, { "Content-Type": "text/plain" });
     res.end("This is an Error Page \n");
   }
