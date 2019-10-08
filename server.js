@@ -17,17 +17,13 @@ http
 
 function my_website(req, res) {
   if (req.url == "/" && req.method == "GET") {
-    /*
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.write(indexfile);
-      res.end();
-      */
+
     fs.readFile("./index.html", function(err, html) {
       if (err) {
         throw err;
       } else {
         res.writeHeader(200, { "Content-Type": "text/html" });
-        res.write(html + "asd");
+        res.write(html + );
         res.end();
       }
     });
