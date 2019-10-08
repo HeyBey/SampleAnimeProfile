@@ -10,12 +10,12 @@ var app = express();
 var port = process.env.PORT || 1337;
 
 //Using App get function
-app.get("/", (req,res,next) => {
+app.get("/", (req,res,test) => {
  
 
   fs.readFile("./index.html", function(err, html) {
     if (err) {
-      next(err);
+      test(req,res);
     } else 
     {    
       res.send(html)
@@ -23,6 +23,10 @@ app.get("/", (req,res,next) => {
   });
 });
 
+function test(req,res,next)
+{
+  res.send("test error");
+}
 /*
 app.get("/profile", (req, res, next)=>{
   res.send("Here is your profile");
