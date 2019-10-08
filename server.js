@@ -1,6 +1,6 @@
 //'use strict';
 var http = require("http");
-var indexfile = require("./index.html");
+var indexfile = require("/index.html");
 var port = process.env.PORT || 1337;
 
 /*
