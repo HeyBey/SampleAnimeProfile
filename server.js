@@ -21,6 +21,9 @@ app.get("/", (req,res,next) => {
   });
 });
 
+app.get("/profile", (req, res, next)=>{
+  res.send("Here is your profile");
+});
 
 app.listen(port, () => {
   console.log("Sample Anime Profile Listening on: " + port);
