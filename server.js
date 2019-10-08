@@ -12,7 +12,6 @@ var port = process.env.PORT || 1337;
 //Using App get function
 app.get("/", (req,res) => {
  res.send("test");
- res.end();
 });
 
 
