@@ -23,7 +23,7 @@ function my_website(req, res) {
         throw err;
       } else {
         res.writeHeader(200, { "Content-Type": "text/html" });
-        res.write(html + );
+        res.write(html);
         res.end();
       }
     });
