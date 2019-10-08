@@ -1,5 +1,6 @@
 //'use strict';
 var http = require("http");
+//Loading file system module
 var fs = require("fs");
 var url = require("url");
 //Loading express module
@@ -8,17 +9,24 @@ var express = require("express");
 var app = express();
 var port = process.env.PORT || 1337;
 
-/*
-http.createServer(function (req, res) {
-   
-}).listen(port);
-*/
+//Using App get function
+app.get("/", (req,res) => {
+  fs.readFile("./index.html", function(err, html) {
+    if (err) {
+      throw err;
+    } else {
+     res.send(html);
+    }
+  });
+});
 
-http
-  .createServer(function(req, res) {
+
+
+//Temporary Commented
+/*
+http.createServer(function(req, res) {
     my_website(req, res);
-  })
-  .listen(port);
+  }).listen(port);
 
 function my_website(req, res) {
   if (req.url == "/" && req.method == "GET") {
@@ -37,3 +45,4 @@ function my_website(req, res) {
     res.end("This is an Error Page \n");
   }
 }
+*/
