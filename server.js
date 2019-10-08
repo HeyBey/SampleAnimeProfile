@@ -28,7 +28,7 @@ function my_website(req, res) {
       "<!DOCTYPE html>" +
       "<html>" +
       "<head>" +
-      "<title>Page Title</title>" +
+      "<title>Kay Yel Pala To</title>" +
       "</head>" +
       "<body>" +
       "<h1>Hehe</h1>" +
