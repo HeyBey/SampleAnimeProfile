@@ -18,7 +18,7 @@ function my_website(req, res) {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end('Hello World \n' + req.url);
     }
-    else if (req.url == "/sample" && req.method == "GET") {
+    else if (req.url == "/sample/word" && req.method == "GET") {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.write('Hello World Sample \n' + req.url);
         res.end();
