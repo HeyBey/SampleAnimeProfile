@@ -18,8 +18,10 @@ app.get("/", (req,res,next) => {
       next(err);
     } else 
     {    
-      //res.send(html);
-      res.send(req.path + "\n");
+      if(req.path == "/test")
+      {
+        res.send("test path is open");
+      }
 
     }
   });
