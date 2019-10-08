@@ -13,10 +13,15 @@ http.createServer(function (req, res) {
 }).listen(port);
 
 function my_website(req, res) {
-   
-  
-     res.writeHead(200, { 'Content-Type': 'text/plain' });
-     res.end('Hello World \n' + req.url);
+
+    if (req.url === "/" && req.method === "GET") {
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        res.end('Hello World \n' + req.url);
+    }
+    else if (req.url === "/error" && req.method === "GET") {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('Error Page Does \n');
+    }
        
   
   
