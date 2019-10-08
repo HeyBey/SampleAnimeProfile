@@ -18,14 +18,14 @@ function my_website(req, res) {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end('Hello World \n' + req.url);
     }
-    else if (req.url == "/sample/word" && req.method == "GET") {
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.write('Hello World Sample \n' + req.url);
+    else if (req.url == "/sampleweb" && req.method == "GET") {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write('<p>Hello World</p> Sample \n' + req.url);
         res.end();
     }
     else {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('Error Page Does \n');
+        res.end('This is an Error Page \n');
     }
        
   
