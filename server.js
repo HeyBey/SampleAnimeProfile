@@ -20,7 +20,7 @@ function my_website(req, res) {
     }
     else if (req.url == "/sample" && req.method == "GET") {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
-        res.end('Hello World Sample \n' + req.url);
+        res.write('Hello World Sample \n' + req.url);
     }
     else {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
