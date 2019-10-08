@@ -1,6 +1,11 @@
 //'use strict';
 var http = require("http");
 var fs = require("fs");
+var url = require("url");
+//Loading express module
+var express = require("express");
+// express function to app
+var app = express();
 var port = process.env.PORT || 1337;
 
 /*
