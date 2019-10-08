@@ -1,5 +1,6 @@
 //'use strict';
 var http = require("http");
+var indexfile = require("./index.html");
 var port = process.env.PORT || 1337;
 
 /*
@@ -16,8 +17,9 @@ http
 
 function my_website(req, res) {
   if (req.url == "/" && req.method == "GET") {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Hello World \n" + req.url);
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(indexfile);
+      res.end();
   } else if (req.url == "/sampleweb" && req.method == "GET") {
     res.writeHead(200, { "Content-Type": "text/html" });
     res.write("<p>Hello World</p> Sample \n" + req.url);
