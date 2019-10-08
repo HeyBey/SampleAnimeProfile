@@ -14,7 +14,9 @@ app.get("/", (req,res) => {
  res.send("test");
 });
 
-
+app.listen(port, () => {
+  console.log("Sample Anime Profile Listening on: " + port);
+});
 
 //Temporary Commented
 /*
