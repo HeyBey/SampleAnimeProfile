@@ -12,7 +12,7 @@ http.createServer(my_website(req, res)).listen(port);
 
 function my_website(req, res) {
    
-    if (req.url === "/" && req.method === "GET") {
+    if (req.url === "/") {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
         res.end('Hello World \n');
     }
