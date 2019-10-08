@@ -34,6 +34,7 @@ function my_website(req, res) {
       "<h1>Hehe</h1>" +
       "</body>" +
       "</html>";
+    res.write(html);
     res.end();
   } else {
     res.writeHead(404, { "Content-Type": "text/plain" });
