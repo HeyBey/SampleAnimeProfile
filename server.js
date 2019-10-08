@@ -9,27 +9,28 @@ http.createServer(function (req, res) {
 }).listen(port);
 */
 
-http.createServer(function(req, res) {
+http
+  .createServer(function(req, res) {
     my_website(req, res);
-}).listen(port);
+  })
+  .listen(port);
 
 function my_website(req, res) {
-    if (req.url == "/" && req.method == "GET") {
-      /*
+  if (req.url == "/" && req.method == "GET") {
+    /*
       res.writeHead(200, { "Content-Type": "text/html" });
       res.write(indexfile);
       res.end();
       */
-        fs.readFile("./index.html", function (err, html) {
-            if (err) {
-                throw err;
-            }
-            else {
-                res.writeHeader(200, { "Content-Type": "text/html" });
-                res.write(html);
-                res.end();  
-            }
-        });       
+    fs.readFile("./index.html", function(err, html) {
+      if (err) {
+        throw err;
+      } else {
+        res.writeHeader(200, { "Content-Type": "text/html" });
+        res.write(html + "asd");
+        res.end();
+      }
+    });
   } else if (req.url == "/sampleweb" && req.method == "GET") {
     res.writeHead(200, { "Content-Type": "text/html" });
     res.write("<p>Hello World</p> Sample \n" + req.url);
