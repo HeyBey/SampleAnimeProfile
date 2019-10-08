@@ -1,0 +1,9 @@
+{
+  "name": "sample-anime-profile",
+  "version": "0.0.0",
+  "description": "Sample Anime Profile",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
