@@ -11,13 +11,8 @@ var port = process.env.PORT || 1337;
 
 //Using App get function
 app.get("/", (req,res) => {
-  fs.readFile("./index.html", function(err, html) {
-    if (err) {
-      throw err;
-    } else {
-     res.send(html);
-    }
-  });
+ res.send("test");
+ res.end();
 });
 
 
