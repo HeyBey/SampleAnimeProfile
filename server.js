@@ -8,7 +8,9 @@ http.createServer(function (req, res) {
 }).listen(port);
 */
 
-http.createServer(my_website(req, res)).listen(port);
+http.createServer(function (req, res) {
+    my_website(req, res);
+}).listen(port);
 
 function my_website(req, res) {
    
