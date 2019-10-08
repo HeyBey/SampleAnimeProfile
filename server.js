@@ -10,12 +10,10 @@ var app = express();
 var port = process.env.PORT || 1337;
 
 //Using App get function
-app.get("/", (req,res) => {
-  throw new Error("Cannot get that page");
-  
+app.get("/", (req,res,next) => {
   fs.readFile("./index.html", function(err, html) {
     if (err) {
-      throw err;
+      next(err);
     } else 
     {    
       res.send(html);
