@@ -22,7 +22,7 @@ function my_website(req, res) {
     res.writeHead(200, { "Content-Type": "text/html" });
     res.write("<p>Hello World</p> Sample \n" + req.url);
     res.end();
-  } else if (req.url == "/zxc" && req.get == "GET") {
+  } else if (req.url == "/zxc" && req.method == "GET") {
     res.writeHead(200, { "Content-Type": "text/html" });
     var html =
       "<!DOCTYPE html>" +
