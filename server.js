@@ -11,19 +11,25 @@ var port = process.env.PORT || 1337;
 
 //Using App get function
 app.get("/", (req,res,next) => {
+ 
+
   fs.readFile("./index.html", function(err, html) {
     if (err) {
       next(err);
     } else 
     {    
       res.send(html);
+      res.send(req.path + "\n");
+
     }
   });
 });
 
+/*
 app.get("/profile", (req, res, next)=>{
   res.send("Here is your profile");
 });
+*/
 
 app.listen(port, () => {
   console.log("Sample Anime Profile Listening on: " + port);
