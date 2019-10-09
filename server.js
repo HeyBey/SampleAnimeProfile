@@ -27,14 +27,14 @@ app.get("/", (req,res, next) => {
   });
 });
 
-app.get("/special", special("test"));
+app.get("/special", special);
 
-function special(req,res,text)
+function special(req,res)
 {
   res.set({
     "Content-Type":"text/html"
   });
-  res.write(text);
+  res.write("sample");
   res.end();
 }
 
