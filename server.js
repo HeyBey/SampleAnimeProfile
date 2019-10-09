@@ -13,7 +13,7 @@ var port = process.env.PORT || 1337;
 app.use("/webfiles", express.static("public"));
 
 //Using App get function
-app.get("/", (req,res, next) => {
+app.get("/", (req,res) => {
    fs.readFile("./index.html", function(err, html) {
     if (err) {
       test(req,res);
