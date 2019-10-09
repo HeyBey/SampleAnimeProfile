@@ -2,6 +2,7 @@ body {
     height: 1024px;
 }
 div.container > div.row > div {
+    position: relative;
     border: 1px solid black;
     height: 50%;
 }
