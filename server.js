@@ -29,7 +29,7 @@ app.get("/", (req,res, next) => {
 
 app.get('/user/:id', function (req, res, next) {
   // if the user ID is 0, skip to the next route
-  if (req.params.id === '0') next()
+  if (req.params.id === '0') next('test')
   // otherwise pass the control to the next middleware function in this stack
   else next()
 }, function (req, res, next) {
