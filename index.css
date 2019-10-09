@@ -1,6 +1,4 @@
-div.container {
-  height: 25%;
-}
 div.container > div.row > div {
     border: 1px solid black;
+    height: 25%;
 }
