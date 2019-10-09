@@ -1,4 +1,4 @@
 div.container > div.row > div {
     border: 1px solid black;
-    height: 300px;
+    height: 50%;
 }
