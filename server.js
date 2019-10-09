@@ -10,7 +10,7 @@ var app = express();
 var port = process.env.PORT || 1337;
 
 //To serve static file
-app.use("/webfiles", express.static(__dirname + "public"));
+app.use("/webfiles", express.static("public"));
 
 //Using App get function
 app.get("/", (req,res, next) => {
