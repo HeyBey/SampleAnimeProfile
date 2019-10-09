@@ -28,14 +28,14 @@ app.get("/", (req,res) => {
   });
 });
 
-app.get("/special", special);
+app.get("/special", special("world",req,res));
 
-function special(req,res)
+function special(text,req,res)
 {
   res.set({
     "Content-Type":"text/html"
   });
-  res.write("sample");
+  res.write("sample " + text);
   res.end();
 }
 
