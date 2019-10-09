@@ -22,7 +22,8 @@ app.get("/", (req,res, next) => {
       res.set({
         "Content-Type":"text/html"
       })
-      res.send(html)
+      res.send(html);
+      res.end();
     }
   });
 });
