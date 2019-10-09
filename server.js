@@ -19,6 +19,9 @@ app.get("/", (req,res, next) => {
       test(req,res);
     } else 
     {    
+      res.set({
+        "Content-Type":"text/html"
+      })
       res.send(html)
     }
   });
