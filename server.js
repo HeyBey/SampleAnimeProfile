@@ -28,6 +28,10 @@ app.get("/", (req,res,next) => {
   });
 });
 
+app.get("/special", function(req,res){
+  res.send(req.locals + "\n" + res.locals)
+  res.end();
+});
 
 
 /*
