@@ -28,16 +28,7 @@ app.get("/", (req,res,next) => {
   });
 });
 
-app.get("/special", special(req.locals.text = "world",res));
 
-function special(req,res)
-{
-  res.set({
-    "Content-Type":"text/html"
-  });
-  res.write("sample " + req.locals.text);
-  res.end();
-}
 
 /*
 app.get("/profile", (req, res, next)=>{
