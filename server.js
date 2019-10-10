@@ -32,8 +32,8 @@ app.get("/special", function(req ,res){
   res.set({
     "Content-Type":"text/html"
   });
-  req.locals.text = "a"
-  res.send(typeof req.locals.text);
+  req.locals.text = "a";
+  res.send("typeof req.locals.text");
   res.end();
 });
 
