@@ -21,7 +21,7 @@ app.get("/", (req,res,next) => {
     {    
       res.set({
         "Content-Type":"text/html"
-      })
+      });
       res.send(html);
       res.end();
     }
@@ -29,6 +29,9 @@ app.get("/", (req,res,next) => {
 });
 
 app.get("/special", function(req ,res){
+  res.set({
+    "Content-Type":"text/html"
+  });
   req.locals.text = "a"
   res.send(typeof req.locals.text);
   res.end();
