@@ -29,7 +29,7 @@ app.get("/", (req,res,next) => {
 });
 
 app.get("/special", function(req,res){
-  console.log(req.locals);
+  res.send(typeof req.locals)
   res.end();
 });
 
