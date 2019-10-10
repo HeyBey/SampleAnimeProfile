@@ -30,7 +30,7 @@ app.get("/", (req,res,next) => {
 
 app.get("/special", function(req ,res){
   req.locals.text = "a"
-  res.send(typeof req.locals)
+  res.send(typeof req.locals.text);
   res.end();
 });
 
