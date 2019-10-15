@@ -1,3 +1,7 @@
+//Main Function Here
 $(function(){
-console.log("test");
+
+
 });
+
+//Custom Functions Here
