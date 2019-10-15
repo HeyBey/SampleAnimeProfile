@@ -1,3 +1,2 @@
 
-alert("test");
-console.log("test");
+$("title").text("akldjaksljdlas");
