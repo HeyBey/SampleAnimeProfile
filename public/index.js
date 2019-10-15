@@ -1,2 +1,3 @@
-
-$("title").text("akldjaksljdlas");
+$(function(){
+console.log("test");
+});
