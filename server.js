@@ -28,6 +28,7 @@ app.get("/", (req,res,next) => {
   });
 });
 
+
 app.get("/special", function(req ,res){
   res.set({
     "Content-Type":"text/html"
